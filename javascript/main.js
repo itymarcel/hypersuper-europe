@@ -1,8 +1,12 @@
 var work_slideshow_position = 0;
 var work_slideshow_count = 0;
 var isMobile = false;
+var date = new Date();
+var year = date.getFullYear();
+
 
 $(function() {
+  document.getElementById('year').innerHTML = year; 
   if (/Mobi|Android/i.test(navigator.userAgent)) {
     isMobile = true;
   }

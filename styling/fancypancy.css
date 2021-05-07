@@ -226,11 +226,12 @@ a:visited, a:active {
 }
 .who-is-hyper-super {
   position: relative;
+  left: -3px;
   max-width:85%;
   padding:10px;
   margin-top:5px;
   font-size:calc(0.2em + 7vh);
-  line-height: 1.2em;
+  line-height: 1.15em;
   box-sizing: border-box;
   padding-top:3px;
   z-index: 2;
