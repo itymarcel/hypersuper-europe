@@ -2,41 +2,102 @@ html, body{
   position:relative;
   margin:0;
   padding:0;
-  width:auto;
-  height:auto;
   max-width:100%;
   font-family: 'Helvetica Neue', Helvetica;
   font-size: 1.2em;
   -webkit-overflow-scrolling: touch;
   overflow: hidden;
-  background: #d5d5d5;
+  
   -webkit-text-size-adjust:none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body.mega_perspective {
   perspective: 170px;
 }
 body {
-  background-color: #d5d5d5;
+  background-color: #ffffff;
   transition: perspective 60ms ease-out;
   perspective: 200px;
   will-change: perspective;
+  width:100vw;
+  height:100vh;
+  background: #eeeeee url('../noise.svg');
 }
 .inner-body {
   position:relative;
   width:100%;
   height:100%;
-  background-color: none;
   will-change: transform;
 
   transform:translateZ(-50px);
   -webkit-font-smoothing: subpixel-antialiased;
   backface-visibility: hidden;
+
 }
+
 .cursor-container {
   position:absolute;
   z-index:0;
-  width:100%;
-  height:100%;
+  width: 292px;
+  height: 420px;
+  outline: 1px solid yellow;
+  overflow:hidden;
+}
+
+.cursor-container {
+  position:absolute;
+  z-index:0;
+  width: 604px;
+  height: 249px;
+  outline: 1px solid yellow;
+  overflow:hidden;
+}
+
+.cursor-container {
+  position:absolute;
+  z-index:0;
+  width: 388px;
+  height: 132px;
+  outline: 1px solid yellow;
+  overflow:hidden;
+}
+
+.cursor-container {
+  position:absolute;
+  z-index:0;
+  width: 900px;
+  height: 484px;
+  outline: 1px solid yellow;
+  overflow:hidden;
+}
+
+.cursor-container {
+  position:absolute;
+  z-index:0;
+  width: 1156px;
+  height: 772px;
+  outline: 1px solid yellow;
+  overflow:hidden;
+}
+
+.cursor-container {
+  position:absolute;
+  z-index:0;
+  width: 2564px;
+  height: 196px;
+  outline: 1px solid yellow;
+  overflow:hidden;
+}
+
+.cursor-container {
+  position:absolute;
+  z-index:0;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid yellow;
   overflow:hidden;
 }
 #cursor-gradient {
@@ -47,8 +108,10 @@ body {
   height:170vh;
   transform-origin: center;
   z-index:0;
-  background: radial-gradient(circle, rgba(0,255,0,1) 0%, rgba(213,213,213,0) 30%);
+  /* background: radial-gradient(circle, rgba(253,121,106,1) 0%, rgba(213,213,213,0) 30%), url('../noise.svg'); */
+  background: radial-gradient(circle, rgba(253,121,106,1) 0%, rgba(213,213,213,0) 30%);
 }
+
 .hello {
   position: fixed;
   width:100%;
@@ -73,7 +136,7 @@ a {
   border-bottom:3px solid rgb(0, 255, 0);
 }
 mark {
-  background-color: #00ff00;
+  background-color: #fd796a;
 }
 a:hover {
   color:white !important;

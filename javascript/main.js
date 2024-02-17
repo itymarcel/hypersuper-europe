@@ -6,7 +6,6 @@ var year = date.getFullYear();
 
 
 $(function() {
-  document.getElementById('year').innerHTML = year; 
   if (/Mobi|Android/i.test(navigator.userAgent)) {
     isMobile = true;
   }
@@ -38,13 +37,22 @@ $(function() {
   if(isMobile == false) {
     setInterval(move_cursor, 16.666666666666);
   }
+  function calculateOutput(x) {
+    const C = 0.0000005; // Decay rate
+    return 0.9 + 0.9 * Math.exp(-C * Math.abs(x));
+  }
+  
   function move_cursor() {
     pos_difference.x = mouse_pos.x - cursor_pos.x;
     pos_difference.y = mouse_pos.y - cursor_pos.y;
     if(pos_difference.x != 0 || pos_difference.y != 0) {
-      cursor_pos.x += pos_difference.x * 0.01;
-      cursor_pos.y += pos_difference.y * 0.01;
-      $('#cursor-gradient').css("transform", "translate("+cursor_pos.x+"px, "+cursor_pos.y+"px)");
+      cursor_pos.x += pos_difference.x * 0.005;
+      cursor_pos.y += pos_difference.y * 0.005;
+      xScale = calculateOutput(pos_difference.x)
+      yScale = calculateOutput(pos_difference.y)
+      // xScale = 1
+      // yScale = 1
+      $('#cursor-gradient').css("transform", "translate("+cursor_pos.x+"px, "+cursor_pos.y+"px) scale(" + xScale +", " + yScale + ")");
     }
     rot_difference.x = mouse_pos.y - window_size.height / 2 - body_rotation.x;
     rot_difference.y = mouse_pos.x - window_size.width / 2 - body_rotation.y;
@@ -56,8 +64,8 @@ $(function() {
     }
   }
   $(document).mousemove(function(e) {
-    mouse_pos.x = e.pageX;
-    mouse_pos.y = e.pageY;
+    mouse_pos.x = e.pageX - $('#cursor-container').offset().left;
+    mouse_pos.y = e.pageY - $('#cursor-container').offset().top;
   });
   function natural_body() {
     $('body').addClass('mega_perspective');
