@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  </head>
-  <body>
-    <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100vw; height: 100vh;">
-      <img src="stone.jpeg" style="width:50vw; height: auto; object-fit: cover;" />
-      <h2 style="color: #0000ff; font-size: 14px;">FURKA247 → 2025, by <i>PSM</i> and <i>FINJI</i></h2>
-    </div>
-  </body>
-</html>
+<!doctypehtml><html lang=en><style>@keyframes flicker{0%{opacity:0}5%{opacity:1}15%{opacity:.3}22%{opacity:.8}30%{opacity:.4}38%{opacity:1}50%{opacity:0}65%{opacity:.6}72%{opacity:1}81%{opacity:.2}90%{opacity:.9}100%{opacity:0}}#flicker{animation:flicker .5s infinite}img{width:50vw}@media screen and (max-device-width:768px) and (orientation:portrait){img{width:80vw}}</style><div style=display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;width:100vw;height:100vh><div style=width:100%;position:absolute;height:100%;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center><img src=stone.jpeg style=height:auto;object-fit:cover></div><div style=width:100%;position:absolute;height:100%;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:center><img src=stone-wire.jpeg style=display:none;height:auto;object-fit:cover id=flicker></div><h2 style=color:#00f;font-size:14px;position:absolute;z-index:3;bottom:30%>FURKA247 → 2025, by <i>PSM</i> and <i>FINJI</i></h2></div><script>setInterval(() => {
+  const flicker = document.getElementById("flicker");
+  flicker.style.display = "block";
+
+  // Hide it again after 300ms
+  setTimeout(() => {
+    flicker.style.display = "none";
+  }, 300);
+}, 6500);</script>
