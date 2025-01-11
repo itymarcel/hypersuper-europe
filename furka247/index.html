@@ -1,9 +1,80 @@
-<!doctypehtml><html lang=en><style>@keyframes flicker{0%{opacity:0}5%{opacity:1}15%{opacity:.3}22%{opacity:.8}30%{opacity:.4}38%{opacity:1}50%{opacity:0}65%{opacity:.6}72%{opacity:1}81%{opacity:.2}90%{opacity:.9}100%{opacity:0}}#flicker{animation:flicker .5s infinite}img{width:50vw}@media screen and (max-device-width:768px) and (orientation:portrait){img{width:80vw}}</style><div style=display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;width:100vw;height:100vh><div style=width:100%;position:absolute;height:100%;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center><img src=stone.jpeg style=height:auto;object-fit:cover></div><div style=width:100%;position:absolute;height:100%;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:center><img src=stone-wire.jpeg style=display:none;height:auto;object-fit:cover id=flicker></div><h2 style=color:#00f;font-size:14px;position:absolute;z-index:3;bottom:30%>FURKA247 → 2025, by <i>PSM</i> and <i>FINJI</i></h2></div><script>setInterval(() => {
-  const flicker = document.getElementById("flicker");
-  flicker.style.display = "block";
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @keyframes flicker {
+        0% {
+          opacity: 0;
+        }
+        5% {
+          opacity: 1;
+        }
+        15% {
+          opacity: 0.3;
+        }
+        22% {
+          opacity: 0.8;
+        }
+        30% {
+          opacity: 0.4;
+        }
+        38% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        65% {
+          opacity: 0.6;
+        }
+        72% {
+          opacity: 1;
+        }
+        81% {
+          opacity: 0.2;
+        }
+        90% {
+          opacity: 0.9;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
 
-  // Hide it again after 300ms
-  setTimeout(() => {
-    flicker.style.display = "none";
-  }, 300);
-}, 6500);</script>
+      #flicker {
+        animation: flicker 0.5s infinite;
+      }
+
+      /* Default styling */
+      img {
+        width: 50vw; /* Default width */
+      }
+
+      /* Media query for portrait mode on phones */
+      @media screen and (max-device-width: 768px) and (orientation: portrait) {
+        img {
+          width: 80vw; /* Adjusted width for phones in portrait mode */
+        }
+      }
+    </style>
+  </head>
+  <body style="overflow:hidden;">
+    <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100vw; height: 100vh; overflow:hidden;">
+      <div style="width: 100%; position: absolute; height: 100%; z-index: 1; display:flex; flex-direction: column; justify-content: center; align-items: center;"><img src="stone.jpeg" style="height: auto; object-fit: cover;" /></div>
+      <div style="width: 100%; position: absolute; height: 100%; z-index: 2; display:flex; flex-direction: column; justify-content: center; align-items: center;"><img src="stone-wire.jpeg" id="flicker" style="display:none; height: auto; object-fit: cover;" /></div>
+      <h2 style="color: #0000ff; font-size: 14px; position: absolute; z-index: 3; bottom:10%;">FURKA247 → 2025, by <i><a href="https://www.instagram.com/philippschenkmischke/" target="_blank">PSM</a></i> and <i><a href="https://www.instagram.com/itisfinji/" target="_blank">FINJI</a></i></h2>
+    </div>
+
+    <script>
+      setInterval(() => {
+        const flicker = document.getElementById("flicker");
+        flicker.style.display = "block";
+
+        // Hide it again after 300ms
+        setTimeout(() => {
+          flicker.style.display = "none";
+        }, 300);
+      }, 6500);
+    </script>
+  </body>
+</html>
