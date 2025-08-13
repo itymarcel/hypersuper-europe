@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>Marcel's Work</title>
-    <base href="https://www.hypersuper.uk/marcel/" />
+    <!-- <base href="https://www.hypersuper.uk/marcel/" /> -->
+    <base href="http://localhost:8080" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/png" href="favicon.png" />
@@ -11,157 +12,249 @@
     <meta name="keyword" content="" />
 
     <meta name="viewport" content="width=device-width">
-    
-    <link rel="stylesheet" type='text/css' href="magic.css" />
+
+    <link rel="stylesheet" type="text/css" href="magic.css" />
+
+    <!-- Optional: gentle fade-in for loaded media -->
+    <style>
+      .lozad { opacity: 0; transition: opacity .4s ease; }
+      .is-loaded { opacity: 1; }
+    </style>
   </head>
   <body>
     <div class="text">
-      This website features the outcomes of some of Marcel's work in no specific order. Types of work are 💍physical objects – 🥁music – 📸 photography – 💽software – 🎥video – 🪃motion graphics – ♣︎graphic design and  websites. Kisses xx
+      This website features the outcomes of some of Marcel's work in no specific order. Types of work are 💍physical objects – 🥁music – 📸 photography – 💽software – 🎥video – 🪃motion graphics – ♣︎graphic design and  websites xx
       <div class="tiny">
         <a href="https://www.instagram.com/itisfinji" target="_blank">instagram</a> / 
         <a href="https://www.hypersuper.uk"  target="_blank">hypersuper design consultancy</a> /
         <a href="https://www.soundcloud.com/finji-1"  target="_blank">soundcloud</a> / 
-        <a href="https://www.soundcloud.com/finji-1"  target="_blank">spotify</a> / 
+        <a href="https://open.spotify.com/artist/7kp1fXqcsFWHd0L2gQFrxc?si=hCG9lwx-Rwqu4uEw7rxQVg"  target="_blank">spotify</a> / 
+        <a href="https://github.com/itymarcel/"  target="_blank">github</a> / 
         <a href="https://www.linkedin.com/in/marcel-finji-mueller/"  target="_blank">linkedin</a>
       </div>
     </div>
-    
+
+    <!-- HERO (keep eager for best LCP) -->
     <div class="image">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" title="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/01-1.jpg" /></div>
+      <div>
+        <img
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          alt="Theo 3 collaborative, acoustic, musical instrument"
+          title="Theo 3 collaborative, acoustic, musical instrument"
+          src="work/01-1.jpg"
+        />
+      </div>
+    </div>
+
+    <div class="image two">
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/furka3.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/furka9.jpg" /></div>
     </div>
 
     <div class="image">
-      <video class="lazy" playsinline autoplay loop width="100%" data-src="work/web-streamme.mp4">
-        <source type="video/mp4" data-src="work/web-streamme.mp4" />
+      <video class="lozad" playsinline autoplay loop muted preload="none" width="100%">
+        <source data-src="work/web-streamme.mp4" type="video/mp4" />
       </video>
     </div>
 
     <div class="image three">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/02-1.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/01-2.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/03-2.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/02-1.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/01-2.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/03-2.jpg" /></div>
     </div>
 
     <div class="image">
-      <div><img alt="Margate coast from inside the café" class="lazy" data-src="work/26820016.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Margate coast from inside the café" data-src="work/26820016.jpg" /></div>
     </div>
 
     <div class="image three">
-      <div style="flex-grow: 1;"><video class="lazy" playsinline autoplay loop width="100%" data-src="work/web-hs.mp4">
-        <source type="video/mp4" data-src="work/web-hs.mp4" />
-      </video></div>
-      <div><video class="lazy" playsinline autoplay loop width="100%" data-src="work/web-kibufamily.mp4">
-        <source type="video/mp4" data-src="work/web-kibufamily.mp4" />
-      </video></div>
-    </div>
-
-    <div class="image">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/11.jpg" /></div>
-    </div>
-
-    <div class="image">
+      <div style="flex-grow: 1;">
+        <video class="lozad" playsinline autoplay loop muted preload="none" width="100%">
+          <source data-src="work/web-hs.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div>
-        <video class="lazy" playsinline autoplay loop width="100%" data-src="./work/web-kibuconfigure.mp4">
-          <source type="video/mp4" data-src="work/web-kibuconfigure.mp4" />
+        <video class="lozad" playsinline autoplay loop muted preload="none" width="100%">
+          <source data-src="work/web-kibufamily.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
 
+    <div class="image">
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/11.jpg" /></div>
+    </div>
+
+    <div class="image">
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/on.jpg" /></div>
+    </div>
+
+    <div class="image">
+      <div>
+        <video class="lozad" playsinline autoplay loop muted preload="none" width="100%">
+          <source data-src="work/web-kibuconfigure.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
 
     <div class="image three">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/09.gif" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/10.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/11-1.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/09.gif" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/10.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/11-1.jpg" /></div>
     </div>
-
 
     <div class="image">
-      <div><iframe width="100%" src="https://www.youtube.com/embed/kPjOjGkrXCE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <div>
+        <iframe
+          class="lozad"
+          width="100%"
+          data-src="https://www.youtube.com/embed/kPjOjGkrXCE?controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
-    <!--<div class="image two">
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1123185010&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1078770103&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>!-->
+    <!--
     <div class="image two">
-      <div><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/67tr8rxwjIodznuV5SmdvP?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
-      <div><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7JAV0ku6iclH7yU4Mxo5WH?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+      <iframe class="lozad" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1123185010&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      <iframe class="lozad" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1078770103&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    </div>
+    -->
+
+    <div class="image two">
+      <div>
+        <iframe
+          class="lozad"
+          style="border-radius:12px"
+          data-src="https://open.spotify.com/embed/track/67tr8rxwjIodznuV5SmdvP?utm_source=generator&theme=0"
+          width="100%" height="152" frameborder="0" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+      <div>
+        <iframe
+          class="lozad"
+          style="border-radius:12px"
+          data-src="https://open.spotify.com/embed/track/7JAV0ku6iclH7yU4Mxo5WH?utm_source=generator&theme=0"
+          width="100%" height="152" frameborder="0" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
     </div>
 
     <div class="image">
-      <video class="lazy" playsinline autoplay loop width="100%" data-src="work/web-bw.mp4">
-        <source type="video/mp4" data-src="work/web-bw.mp4" />
+      <video class="lozad" playsinline autoplay loop muted preload="none" width="100%">
+        <source data-src="work/web-bw.mp4" type="video/mp4" />
       </video>
     </div>
 
     <div class="image two">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/02.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/09.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/02.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/09.jpg" /></div>
     </div>
 
+    <!-- <div class="image">
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/26820022.jpg" /></div>
+    </div> -->
+
     <div class="image">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/26820022.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/furka6.jpg" /></div>
     </div>
 
     <div class="image three">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/nike08.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/nike06.gif" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/nike01.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/nike08.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/nike06.gif" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/nike01.jpg" /></div>
     </div>
 
     <div class="image two">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/nike07.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/nike02.gif" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/nike07.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/nike02.gif" /></div>
     </div>
 
     <div class="image">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/43440008.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/43440008.jpg" /></div>
     </div>
 
-    <div class="image two">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/26820026.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/30730016.jpg" /></div>
-    </div>
+    <!-- <div class="image two">
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/26820026.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/30730016.jpg" /></div>
+    </div> -->
+    
 
     <div class="image">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/08.gif" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/08.gif" /></div>
     </div>
 
     <div class="image two">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/01.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/03-1.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/01.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/03-1.jpg" /></div>
     </div>
 
     <div class="image four">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/image 2.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/image 3.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/image 4.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/image 5.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/image 2.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/image 3.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/image 4.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/image 5.jpg" /></div>
     </div>
 
     <div class="image">
-      <iframe src="https://open.spotify.com/embed/track/0pPbiS4CR56gK7uu0pXZCE?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-
-    <div class="image two">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/bfriends.png" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/mtlg.jpg" /></div>
+      <div>
+        <video class="lozad" playsinline autoplay loop muted preload="none" width="100%">
+          <source data-src="work/up.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
 
     <div class="image">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/26820009.jpg" /></div>
+      <iframe
+        class="lozad"
+        data-src="https://open.spotify.com/embed/track/0pPbiS4CR56gK7uu0pXZCE?utm_source=generator&theme=0"
+        width="100%" height="352" frameborder="0" allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
     </div>
 
     <div class="image two">
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/12700032.jpg" /></div>
-      <div><img alt="Theo 3 collaborative, acoustic, musical instrument" class="lazy" data-src="work/83860018.jpg" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/bfriends.png" /></div>
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/mtlg.jpg" /></div>
     </div>
 
-    <div class="text">
-      The End. Thank you 🙏
+    <div class="image">
+      <div><img class="lozad" loading="lazy" decoding="async" alt="Theo 3 collaborative, acoustic, musical instrument" data-src="work/furka7.jpg" /></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
-    <script src="main.js"></script>
+    <!-- Lozad.js (CDN) + init -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script>
+      (function () {
+        const observer = lozad('.lozad', {
+          rootMargin: '200px 0px',
+          threshold: 0.1,
+          loaded: el => {
+            // for <video>, ensure playback starts once a frame is available
+            if (el.tagName === 'VIDEO') {
+              const onReady = () => {
+                try { el.play(); } catch(e) {}
+                el.classList.add('is-loaded');
+              };
+              el.addEventListener('loadeddata', onReady, { once: true });
+            } else if (el.tagName === 'IFRAME' || el.tagName === 'IMG') {
+              el.classList.add('is-loaded');
+            } else {
+              el.classList.add('is-loaded');
+            }
+          }
+        });
+        observer.observe();
+      })();
+    </script>
   </body>
 </html>
