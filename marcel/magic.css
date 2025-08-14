@@ -32,7 +32,7 @@ div.image {
   gap: 40px;
 }
 
-div.image > div {
+div.image > div:not(.image-label) {
   position: relative;
   object-fit: cover;
 
@@ -41,6 +41,19 @@ div.image > div {
   align-items: center;
   overflow: hidden;
   min-height: 200px;
+}
+
+.image-label {
+  position: absolute; 
+  right: 5px; 
+  bottom: 5px; 
+  background-color: white; 
+  padding: 2px; 
+  font-size: 12px; 
+  height: min-content; 
+  line-height: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* div.image > div::before {
