@@ -18,7 +18,7 @@ div.text {
 }
 
 div.text .tiny {
-  font-size: 0.4em;
+  font-size: 0.6em;
   margin-top: 10px;
 }
 
@@ -40,7 +40,7 @@ div.image > div:not(.image-label) {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  min-height: 200px;
+  min-height: 100px;
 }
 
 .image-label {
@@ -78,14 +78,49 @@ div.image > div > img {
   position: relative;
   min-width: 100%;
   min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   width: auto;
   height: auto;
   box-sizing: border-box;
   object-fit: cover;
 }
 
+.clickable {
+  position: relative;
+  cursor: pointer;
+}
+.clickable::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 1;
+  animation: hue-rotate 6s infinite linear;
+}
+.clickable.legend::after {
+  top: 12px;
+  right: -16px;
+}
+
+@keyframes hue-rotate {
+  0% { background-color: hsl(0, 100%, 50%); }
+  16.67% { background-color: hsl(60, 100%, 50%); }
+  33.33% { background-color: hsl(120, 100%, 50%); }
+  50% { background-color: hsl(180, 100%, 50%); }
+  66.67% { background-color: hsl(240, 100%, 50%); }
+  83.33% { background-color: hsl(300, 100%, 50%); }
+  100% { background-color: hsl(360, 100%, 50%); }
+}
+
+
 div.image > * {
   flex: 1;
+  width: 100%;
 }
 
 div.image.two > * {
@@ -104,9 +139,11 @@ div.image iframe {
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 812px) {
+
   div.image {
     gap: 10px;
     margin: 10px;
+    flex-direction: column;
   }
   div.text {
     margin: 10px;
